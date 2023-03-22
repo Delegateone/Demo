@@ -1,0 +1,37 @@
+mkdir assign
+cd assign
+git init
+git config --list   # already correct
+git config --list
+echo this is some etxt >file1.txt
+git add file1.txt
+git commit
+git checkout -b feature
+echo this si some more text >file2.txt
+git branch
+git add file2.txt
+git commit
+git branch
+git checkout master
+git merge feature
+echo some stuff >>file1.txt
+git diff
+git add file1.txt
+git commit
+git checkout feature
+echo absolute nonsense >>file1.txt
+git add file1.txt
+git commit
+git merge feature
+git checkout master
+git merge feature
+git add file1.txt
+git commit
+
+cd ..
+mkdir assign-clone
+cd assign-clone
+git clone https://github.com/iwillneverusethisever/assign
+cd assign
+git pull
+
